@@ -1,103 +1,146 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vita Medical Logistics LLC | National Elite Transport</title>
+    <title>Vita Medical Logistics LLC | National STAT Transport</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;700;900&display=swap');
-        body, html { margin: 0; padding: 0; background-color: #000; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;700;900&display=swap');
+        body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; margin: 0; scroll-behavior: smooth; }
         
         .hero-section {
             position: relative;
-            min-height: 100vh;
-            width: 100%;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
-                        url('https://i.postimg.cc/Fz0qCKkC/para-codi.jpg'); /* TU IMAGEN 3D ACTUALIZADA */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                        url('https://i.postimg.cc/Fz0qCKkC/para-codi.jpg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
         }
 
-        .heartbeat-box {
-            position: absolute;
-            top: 30px;
-            right: 30px;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .heart-beat-header {
             background: rgba(0, 10, 20, 0.85);
             border: 2px solid #00f2ff;
-            padding: 15px 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            z-index: 50;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
         }
-        .heart-icon { color: #ff0055; font-size: 2.2rem; animation: beat 0.8s infinite; }
-        @keyframes beat { 0% { transform: scale(1); } 50% { transform: scale(1.15); } 100% { transform: scale(1); } }
 
-        .main-title { font-family: 'Orbitron', sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 4px; text-shadow: 0 0 40px rgba(0, 242, 255, 0.8); }
-        .glass-card { background: rgba(255, 255, 255, 0.07); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); border-left: 6px solid #00f2ff; }
-        .btn-stat { background: linear-gradient(90deg, #00f2ff, #0062ff); font-family: 'Orbitron', sans-serif; box-shadow: 0 0 25px rgba(0, 242, 255, 0.5); }
+        .map-frame {
+            filter: invert(90%) hue-rotate(180deg) brightness(0.7) contrast(1.2);
+            opacity: 0.7;
+            transition: opacity 0.5s;
+        }
+        .map-frame:hover { opacity: 1; }
     </style>
 </head>
 <body>
 
-    <section class="hero-section">
-        <div class="heartbeat-box">
-            <i class="fas fa-heartbeat heart-icon"></i>
-            <div>
-                <div class="text-[11px] text-cyan-400 font-black tracking-widest uppercase">System Status: Active</div>
-                <div class="text-white font-black text-lg">24/7 LIVE RESPONSE</div>
+    <section class="hero-section text-center px-6">
+        <div class="absolute top-10 right-10 heart-beat-header p-4 rounded-2xl hidden md:flex items-center gap-4">
+            <i class="fas fa-heartbeat text-red-600 text-3xl animate-pulse"></i>
+            <div class="text-left">
+                <p class="text-[10px] font-black tracking-widest text-cyan-400 uppercase">Mission Status</p>
+                <p class="text-sm font-bold uppercase">24/7 LIVE RESPONSE</p>
             </div>
         </div>
 
-        <div class="text-center px-6 max-w-6xl mt-20">
-            <h1 class="main-title text-4xl md:text-8xl mb-2 italic">VITA MEDICAL</h1>
-            <h2 class="main-title text-2xl md:text-5xl mb-8 text-blue-500">LOGISTICS LLC</h2>
+        <div class="max-w-5xl mt-10">
+            <h1 style="font-family: 'Orbitron';" class="text-5xl md:text-8xl font-black mb-4 tracking-tighter uppercase">VITA MEDICAL</h1>
+            <p class="text-xl md:text-3xl text-cyan-400 font-bold mb-12 uppercase tracking-widest italic">Precision Logistics LLC</p>
             
-            <p class="text-white text-lg md:text-2xl font-light mb-12 max-w-3xl mx-auto border-l-4 border-blue-500 pl-6 bg-black/30 py-2">
-                "Precision-driven organ, tissue, and critical cargo transport. From <span class="text-cyan-400 font-bold underline">NJ/NY to Nationwide</span>."
-            </p>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-16 text-left">
-                <div class="glass-card p-8 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-4">
-                        <img src="https://i.imgur.com/G5rBvGz.png" class="w-16 h-16 rounded-full border-2 border-cyan-400">
-                        <div>
-                            <h3 class="text-2xl font-black italic">Ariel Silverio Marte</h3>
-                            <p class="text-cyan-400 text-xs font-bold uppercase tracking-widest text-shadow-sm">CEO / Tactical Ops Specialist</p>
-                        </div>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Unidad Élite: **Dodge Grand Caravan** equipada con Dolly Pro, refrigeración activa **BougeRV** y monitoreo **Elitech WiFi**. Certificado HIPAA, OSHA y HazMat Class 7.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl">
-                    <h3 class="text-2xl font-black italic mb-4 text-white"><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> National Coverage</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Base operativa en **East Orange, NJ**. Servicio STAT a **JFK, EWR, TEB**. Rutas nacionales críticas hasta **Miami** y cualquier punto de USA con prioridad 1.
-                    </p>
-                </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:8624078544" class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 rounded-2xl font-black text-2xl flex items-center gap-4 transition-all shadow-2xl transform hover:scale-105">
+                    <i class="fas fa-phone-alt"></i> CALL STAT
+                </a>
+                <a href="mailto:info@medicallogistics.com?subject=STAT%20Quote%20Request" class="bg-white/10 hover:bg-white/20 text-white px-12 py-6 rounded-2xl font-black text-2xl border border-white/20 flex items-center gap-4 transition-all shadow-2xl transform hover:scale-105">
+                    <i class="fas fa-file-invoice-dollar text-cyan-400"></i> GET A QUOTE
+                </a>
             </div>
-
-            <a href="tel:8624078544" class="btn-stat text-white px-16 py-6 rounded-2xl font-black text-3xl uppercase tracking-tighter inline-block transform hover:scale-110 transition-all">
-                <i class="fas fa-phone-alt mr-4 animate-bounce"></i> CALL STAT
-            </a>
         </div>
     </section>
 
-    <div class="fixed bottom-0 w-full bg-black/90 py-4 px-6 flex flex-wrap justify-around gap-6 text-[10px] md:text-xs font-black tracking-widest text-slate-400 border-t border-blue-900/50">
-        <span><i class="fas fa-biohazard text-cyan-400"></i> HAZMAT CLASS 7</span>
-        <span><i class="fas fa-snowflake text-cyan-400"></i> COLD-CHAIN ELITE</span>
-        <span><i class="fas fa-user-shield text-cyan-400"></i> HIPAA COMPLIANT</span>
-        <span><i class="fas fa-plane text-cyan-400"></i> AIRPORT STAT SERVICE</span>
-    </div>
+    <section class="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div class="glass-card p-10 rounded-3xl border-l-8 border-blue-600 shadow-2xl">
+            <div class="flex items-center gap-8 mb-10">
+                <img src="https://i.postimg.cc/9MhNRhny/IMG-2427.jpg" alt="Ariel Silverio" class="w-32 h-40 rounded-2xl border-2 border-cyan-400 object-cover shadow-2xl">
+                <div>
+                    <h3 class="text-3xl font-black italic uppercase text-white">Ariel Silverio</h3>
+                    <p class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-3 italic">CEO | Operations Director</p>
+                    <div class="space-y-1">
+                        <a href="mailto:ariel@medicallogistics.com" class="flex items-center gap-2 text-slate-400 text-xs hover:text-cyan-400 transition">
+                            <i class="fas fa-envelope"></i> ariel@medicallogistics.com
+                        </a>
+                        <p class="flex items-center gap-2 text-slate-400 text-xs">
+                            <i class="fas fa-map-marker-alt text-red-500"></i> East Orange, New Jersey
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-slate-300 text-lg leading-relaxed italic mb-8 border-l-2 border-slate-700 pl-6">
+                "We don't just move cargo; we manage life-saving missions. Our specialized fleet and certified protocols ensure zero-risk transport for the most critical medical needs nationwide."
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 text-center">
+                    <i class="fas fa-snowflake text-cyan-400 mb-2"></i>
+                    <p class="text-[10px] font-black uppercase">Cold Chain Elite</p>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 text-center">
+                    <i class="fas fa-biohazard text-cyan-400 mb-2"></i>
+                    <p class="text-[10px] font-black uppercase">HazMat Class 7</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <h2 style="font-family: 'Orbitron';" class="text-4xl font-black italic uppercase tracking-tighter">Strategic <span class="text-blue-600">Operations</span></h2>
+            <p class="text-slate-400 text-lg">
+                Vita Medical Logistics LLC provides nationwide, 24/7 STAT medical transportation. We specialize in organs, tissues, and laboratory specimens that require uncompromising urgency and temperature control.
+            </p>
+            <ul class="space-y-4">
+                <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-white">
+                    <i class="fas fa-check-circle text-blue-500 text-xl"></i> Specialized 2016 Dodge Grand Caravan Unit
+                </li>
+                <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-white">
+                    <i class="fas fa-check-circle text-blue-500 text-xl"></i> HIPAA, OSHA, & Bloodborne Pathogens Certified
+                </li>
+                <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-white">
+                    <i class="fas fa-check-circle text-blue-500 text-xl"></i> Real-time Elitech WiFi Temperature Monitoring
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="py-16 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 style="font-family: 'Orbitron';" class="text-3xl font-black italic uppercase inline-block border-b-4 border-blue-600 pb-2">National Hub</h2>
+            </div>
+            <div class="h-[450px] w-full rounded-[2rem] overflow-hidden border border-blue-900/40 shadow-2xl relative group">
+                <iframe src="http://googleusercontent.com/maps.google.com/2" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="map-frame"></iframe>
+                <div class="absolute bottom-10 left-10 glass-card p-6 rounded-2xl shadow-2xl border-l-4 border-cyan-400">
+                    <p class="text-[10px] font-black text-cyan-400 uppercase tracking-[0.3em] mb-1">Operational Base</p>
+                    <p class="font-bold text-xl uppercase tracking-tighter">East Orange, NJ</p>
+                    <p class="text-xs text-slate-400 mt-2 italic font-bold">Serving JFK, EWR, TEB & Beyond</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center bg-slate-950 border-t border-white/5">
+        <div class="mb-8 flex justify-center gap-10 grayscale opacity-40">
+            <i class="fas fa-shield-virus text-4xl"></i>
+            <i class="fas fa-plane-arrival text-4xl"></i>
+            <i class="fas fa-truck-medical text-4xl"></i>
+        </div>
+        <p class="text-slate-500 text-[10px] font-black tracking-[0.8em] uppercase mb-4 italic">Vita Medical Logistics LLC • NJ • USA</p>
+        <p class="text-slate-800 text-[9px] font-bold uppercase tracking-widest">Global Standards in Medical Logistics Operations</p>
+    </footer>
 
 </body>
 </html>
